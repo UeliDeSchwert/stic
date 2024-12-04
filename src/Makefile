@@ -1,6 +1,3 @@
-CPU     = $(shell uname -m)
-OS       = $(shell uname -s)
-
 include makefiles/makefile.$(CPU).$(OS)
 
 RHFOLD = rh/
