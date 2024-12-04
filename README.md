@@ -47,19 +47,23 @@ a new isolated environment:
 
 In linux:
 
+```bash
    conda create --name stic
    conda activate stic
-   conda install gcc_linux-64 gxx_linux-64 gfortran_linux-64 openmpi fftw eigen netcdf-cxx4 libnetcdf netcdf4 -c conda-forge
+   conda install gcc_linux-64 gxx_linux-64 gfortran_linux-64 openmpi fftw eigen libtirpc hdf5=*=*openmpi* netcdf-cxx4=*=*openmpi* libnetcdf=*=*openmpi* netcdf4=*=*openmpi* -c conda-forge
    conda deactivate
    conda activate stic
+```
 
 In OSX:
 
+```bash
    conda create --name stic
    conda activate stic
    conda install gfortran openmpi fftw eigen netcdf-cxx4 libnetcdf netcdf4 -c conda-forge
    conda deactivate
    conda activate stic
+```
 
 Use the appropriate makefiles for the Anaconda installation.
 
@@ -75,6 +79,12 @@ These variables are just labels for the makefiles:
 In linux:
 ```
 export OS=Linux
+export CPU=x86_64
+```
+
+In linux with conda:
+```
+export OS=Linux.conda
 export CPU=x86_64
 ```
 
